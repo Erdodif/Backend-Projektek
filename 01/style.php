@@ -1,15 +1,7 @@
 <?php
     header('Content-Type: text/css');
-    $szin = "indianred";
-    $hatter = "aliceblue";
-    if(isset($_GET["szin"]))
-    {
-        $szin = $_GET["szin"];
-    }
-    if(isset($_GET["hatter"]))
-    {
-        $hatter = $_GET["hatter"];
-    }
+    $szin = $_GET["szin"] ??"indianred";
+    $hatter = $_GET["hatter"] ?? "aliceblue";
 ?>
 body{
     background:<?php 
@@ -18,7 +10,8 @@ body{
 }
 body *{
     background: <?php
-        echo "$szin;color: $hatter;";
+        echo "$szin;
+        color: $hatter;";
     ?> 
 }
 body th {

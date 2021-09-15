@@ -14,7 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="style.php?<?php echo "szin=".$szin; echo "&hatter=".$hatter?>">
+        <link rel="stylesheet" href="style.php?<?php echo "szin=".ki($szin); echo "&hatter=".ki($hatter)?>">
     </head>
     <body>
         <table class="szorzo">

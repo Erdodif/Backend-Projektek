@@ -1,7 +1,11 @@
 <?php
     header('Content-Type: text/css');
-    $szin = $_GET["szin"];
-    $hatter = $_GET["hatter"];
+    function be($str)
+    {
+        return htmlspecialchars_decode($str,ENT_QUOTES);
+    }
+    $szin = be($_GET["szin"]);
+    $hatter = be($_GET["hatter"]);
 ?>
 body{
     background:<?php 

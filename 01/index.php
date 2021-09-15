@@ -1,3 +1,11 @@
+<?php
+    $szin = $_GET["szin"] ?? "#121212";
+    $hatter = $_GET["hatter"] ?? "#101010";
+    function ki($str)
+    {
+        return htmlspecialchars($str,ENT_QUOTES);
+    }
+?>
 <!DOCTYPE html>
 <html lang="hu">
     <head>
@@ -6,7 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="style.php?<?php echo "szin=".$_GET["szin"]; echo "&hatter=".$_GET["hatter"]?>">
+        <link rel="stylesheet" href="style.php?<?php echo "szin=".$szin; echo "&hatter=".$hatter?>">
     </head>
     <body>
         <table class="szorzo">
@@ -35,8 +43,8 @@
             ?>
         </table>
         <form>
-            <input type="text" name="szin" id="szin" placeholder="Szín">
-            <input type="text" name="hatter" id="hatter" placeholder="Háttér">
+            <input type="color" name="szin" id="szin" placeholder="Szín" value="<?php echo ki($szin);?>">
+            <input type="color" name="hatter" id="hatter" placeholder="Háttér" value="<?php echo ki($hatter);?>">
             <input type="submit" value="Elküld">
         </form>
     </body>

@@ -3,7 +3,8 @@
 ?>
 body{
     background:<?php 
-        if(rand(0,1) === 1)
+    $dontes= rand(0,1);
+        if($dontes === 1)
         {
             echo "indianred";
         }
@@ -12,4 +13,16 @@ body{
             echo "aliceblue";
         }
     ?>;
+}
+td{
+    background: <?php
+    if($dontes === 0)
+    {
+        echo "indianred;color: aliceblue;";
+    }
+    else
+    {
+        echo "aliceblue;color: indianred;";
+    }
+    ?> 
 }

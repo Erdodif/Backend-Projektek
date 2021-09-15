@@ -1,0 +1,14 @@
+.szorzo th {
+    background: aquamarine;
+    font-weight: normal;   
+}
+.szorzo {
+    font-size: 1.2em;
+    margin-inline:auto;
+    border: .2em solid cadetblue;
+}
+.szorzo th, .szorzo td {
+    text-align: center;
+    width: 1.4em;
+    height: 1.4em;
+}

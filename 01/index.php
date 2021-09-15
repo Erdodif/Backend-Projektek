@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="style.php">
+        <link rel="stylesheet" href="style.php?<?php echo "szin=".$_GET["szin"]; echo "&hatter=".$_GET["hatter"]?>">
     </head>
     <body>
         <table class="szorzo">
@@ -34,5 +34,10 @@
                 echo $temp;
             ?>
         </table>
+        <form>
+            <input type="text" name="szin" id="szin" placeholder="Szín">
+            <input type="text" name="hatter" id="hatter" placeholder="Háttér">
+            <input type="submit" value="Elküld">
+        </form>
     </body>
 </html>
